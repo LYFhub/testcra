@@ -5,8 +5,19 @@ import './App.css';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sWord: "world and you",
+      aParagraph: [
+        <p>this is the first Paragraph</p>,
+        <p>this is the second Paragraph</p>,
+        <p>this is the third Paragraph</p>
+      ]
+    };
+  }
+
   render() {
-    let word = "world";
     return (
       <div className="App">
         <div className="App-header">
@@ -17,8 +28,11 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <p className="App-intro">
-          Hello {word}
+          Hello {this.state.sWord}
         </p>
+        <div className="App-header">
+          {this.state.aParagraph}
+        </div>
       </div>
     );
   }
