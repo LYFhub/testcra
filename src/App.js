@@ -17,6 +17,15 @@ class App extends Component {
     };
   }
 
+  getCurrentDate(){
+    let currentDate = {
+      time: 'avanade',
+      whynottime: '为什么不能显示时间'
+    };
+
+    return currentDate;
+  }
+
   render() {
     return (
       <div className="App">
@@ -33,6 +42,12 @@ class App extends Component {
         <div className="App-header">
           {this.state.aParagraph}
         </div>
+        <p>
+          {this.getCurrentDate().time}
+        </p>
+        <p>
+          {this.getCurrentDate().whynottime}
+        </p>
       </div>
     );
   }
