@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+
 class App extends Component {
   render() {
+    let word = "world";
     return (
       <div className="App">
         <div className="App-header">
@@ -12,6 +15,9 @@ class App extends Component {
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+        <p className="App-intro">
+          Hello {word}
         </p>
       </div>
     );
