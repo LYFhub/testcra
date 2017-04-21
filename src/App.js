@@ -18,9 +18,10 @@ class App extends Component {
   }
 
   getCurrentDate(){
+    let currentTime = new Date().toString();
     let currentDate = {
       time: 'avanade',
-      whynottime: '为什么不能显示时间'
+      whynottime: currentTime
     };
 
     return currentDate;
