@@ -57,7 +57,7 @@ class App extends Component {
           当前时间：<span ref="curTime"></span>
         </p>
         <p>
-          持续时间：<span ref="duration"></span>
+          持续时间：<span ref="duration">0</span> s
         </p>
       </div>
     );
