@@ -18,13 +18,20 @@ class App extends Component {
   }
 
   getCurrentDate(){
-    let currentTime = new Date().toString();
     let currentDate = {
-      time: 'avanade',
-      whynottime: currentTime
+      time: new Date().toString()
     };
-
     return currentDate;
+  }
+
+  componentDidMount() {
+    let startSecond = 0;
+    this.refs.curTime.innerText = new Date().toString();
+    setInterval(() => {
+      this.refs.curTime.innerText = new Date().toString();
+      // this.refs.duration.innerText = ((window.Date.parse(new Date()) - window.Date.parse(this.refs.openTime.innerText.toString())) / 1000).toString() + "s";
+      this.refs.duration.innerText = ++startSecond;
+    },1000);
   }
 
   render() {
@@ -43,11 +50,14 @@ class App extends Component {
         <div className="App-header">
           {this.state.aParagraph}
         </div>
-        <p>
-          {this.getCurrentDate().time}
+        <p className="App-intro">
+          打开时间：<span ref="openTime">{this.getCurrentDate().time}</span>
+        </p>
+        <p className="App-intro">
+          当前时间：<span ref="curTime"></span>
         </p>
         <p>
-          {this.getCurrentDate().whynottime}
+          持续时间: <span ref="duration"></span>
         </p>
       </div>
     );
