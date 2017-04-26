@@ -9,6 +9,9 @@ class Header extends Component {
 	render() {
 		return (
 			<header className="headerbar">
+				<div className="headerTitle">
+					<h2>糖糖网</h2>
+				</div>
 				<ul>
 					<li><a href="#">首页</a></li>
 					<li><a href="#">文章</a></li>

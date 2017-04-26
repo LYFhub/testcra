@@ -27,20 +27,26 @@ html, body{
   to { transform: rotate(360deg); }
 }
 
-.headerbar {
+.headerbar, .footerbar {
   background-color: #5e5e5e;
   height: 50px;
   color: white;
 }
 
-.headerbar ul {
+.footerbar {
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
+.headerbar ul ,.footerbar ul{
   list-style-type: none;
   height: 100%;
   margin: 0;
-  padding: 0 30px;
   float: right;
+  margin-right: 5%;
 }
-.headerbar ul:after {
+.headerbar ul:after,.footerbar ul:after {
   content: '';
   display: block;
   clear: both;
@@ -49,18 +55,29 @@ html, body{
   width: 0;
 }
 
-.headerbar ul li {
+.headerbar ul li,.footerbar ul li {
   float: left;
-  width: 60px;
+  width: 80px;
   height: 100%;
   text-align: center;
 }
-.headerbar ul li:hover {
+.headerbar ul li:hover, .footerbar ul li:hover{
   background-color: #333333;
 }
 
-.headerbar ul li a{
+.headerbar ul li a, .footerbar ul li a{
   color: white;
   text-decoration: none;
+  line-height: 50px;
+}
+
+.headerbar .headerTitle {
+  width: 100px;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.headerbar .headerTitle h2 {
+  margin: 0;
   line-height: 50px;
 }
