@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../Style/App.css';
 class Header extends Component {
 	constructor(props) {
 		super(props);
@@ -16,7 +16,7 @@ class Header extends Component {
 					<li><a href="#">首页</a></li>
 					<li><a href="#">文章</a></li>
 					<li><a href="#">图片</a></li>
-					<li><a href="#">播放器</a></li>
+					<li><a href="#">音乐</a></li>
 				</ul>
 			</header>
 		);
